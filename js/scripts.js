@@ -45,15 +45,11 @@ function Contact(firstName, lastName, phoneNumber, address, emails) {
   this.address = address,
   this.emails = emails
 }
-// Contact.prototype.addEmail = function(email) {
-//   email.id = this.assignId();
-//   this.emails.push(email);
-// }
 
 Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
-}
-var email = '';
+};
+
 function Email (workEmail, homeEmail) {
   this.workEmail = workEmail,
   this.homeEmail = homeEmail
@@ -71,10 +67,6 @@ function displayContactDetails(addressBookToDisplay) {
   });
   contactsList.html(htmlForContactInfo);
 };
-
-// var email = new Email();
-// var workEmail = this.workEmail;
-// var homeEmail = this.homeEmail;
 
 function showContact(contactId) {
   var contact = addressBook.findContact(contactId);
